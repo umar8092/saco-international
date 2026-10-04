@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SACO International | Rice, Tea, Spices &amp; Trade from Pakistan</title>
+<meta name="description" content="SACO International is a Peshawar-based import, export and wholesale company supplying rice, tea, spices, fruits, carpets and gems from Pakistan to buyers worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F1D2B;
+  --slate:#3B3850;
+  --slate-soft:#5E5A74;
+  --saffron:#E3742A;
+  --saffron-deep:#B9561A;
+  --paper:#F4F3F7;
+  --surface:#FFFFFF;
+  --line:#DCDAE4;
+  --muted:#5E5A74;
+  --on-dark:#F4F3F7;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#ECEAF3; --slate:#1C1A27; --slate-soft:#A8A4BC;
+    --saffron:#F08A42; --saffron-deep:#F5A56C;
+    --paper:#14131C; --surface:#1E1C29; --line:#34314A; --muted:#B3AFC6; --on-dark:#F4F3F7;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#ECEAF3; --slate:#1C1A27; --slate-soft:#A8A4BC;
+  --saffron:#F08A42; --saffron-deep:#F5A56C;
+  --paper:#14131C; --surface:#1E1C29; --line:#34314A; --muted:#B3AFC6; --on-dark:#F4F3F7;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--saffron);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1160px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-0.015em}
+h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:700}
+h3{font-size:1.35rem;font-weight:700}
+p{margin:0}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--slate);color:var(--on-dark)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:-.01em}
+.logo-mark{width:30px;height:30px;border-radius:50%;background:var(--saffron);display:grid;place-items:center}
+.logo small{font-weight:500;opacity:.75;font-size:.95rem;margin-left:.15rem}
+nav ul{list-style:none;display:flex;gap:1.6rem;margin:0;padding:0}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem;opacity:.85}
+nav a:hover{opacity:1;color:var(--saffron)}
+.nav-cta{background:var(--saffron);color:#fff;padding:.55rem 1rem;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;white-space:nowrap}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:inherit;border-radius:8px;padding:.4rem .7rem;font:inherit;cursor:pointer}
+
+/* Hero */
+.hero{background:var(--slate);color:var(--on-dark);padding:4.5rem 0 0;overflow:hidden}
+.hero h1{font-size:clamp(2.5rem,6.4vw,5.25rem);font-weight:800;max-width:14ch}
+.hero-lede{margin-top:1.4rem;max-width:56ch;font-size:1.15rem;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent}
+.btn-primary{background:var(--saffron);color:#fff}
+.btn-primary:hover{background:var(--saffron-deep)}
+.btn-ghost{border-color:rgba(244,243,247,.45);color:var(--on-dark)}
+.btn-ghost:hover{border-color:var(--on-dark)}
+
+.route{margin-top:3.5rem;padding:2rem 0 2.5rem;border-top:1px solid rgba(244,243,247,.14)}
+.route-caption{font-size:.95rem;opacity:.7;margin-bottom:1rem}
+.route-scroll{overflow-x:auto}
+.route svg{display:block;min-width:760px;width:100%;height:auto}
+.route .path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.4s ease-out .3s forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){.route .path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
+
+/* Sections */
+section{padding:5.5rem 0}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:3rem}
+.section-head p{color:var(--muted);max-width:52ch}
+
+/* Products */
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:0 3rem}
+.product{display:grid;grid-template-columns:56px 1fr;gap:1.2rem;padding:1.8rem 0;border-top:1px solid var(--line)}
+.product svg{width:56px;height:56px}
+.product p{color:var(--muted);margin-top:.45rem}
+.product .items{margin-top:.6rem;font-size:.95rem;color:var(--ink);font-weight:500}
+.product.feature{grid-column:1 / -1;grid-template-columns:56px 1fr 1fr;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:2rem;margin-bottom:1.5rem}
+.product.feature h3{font-size:1.9rem}
+.rice-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.2rem;align-content:start}
+.rice-list li{padding-left:1rem;position:relative;font-weight:500}
+.rice-list li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--saffron)}
+
+/* Services */
+.services{background:var(--surface);border-block:1px solid var(--line)}
+.service-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:3rem 1fr;gap:1rem;padding:1.3rem 0;border-top:1px solid var(--line)}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:1.8rem;color:var(--saffron);line-height:1}
+.steps p{color:var(--muted);margin-top:.3rem}
+.transit{background:var(--slate);color:var(--on-dark);border-radius:20px;padding:2.2rem;align-self:start}
+.transit p{opacity:.85;margin-top:.8rem}
+.transit ul{margin:1.2rem 0 0;padding-left:1.1rem}
+.transit li{margin:.35rem 0;opacity:.9}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+.about-grid > div > p + p{margin-top:1rem}
+.about-grid p{color:var(--muted)}
+.mv{display:grid;gap:1.2rem;margin-top:2rem}
+.mv div{border-left:4px solid var(--saffron);padding-left:1.1rem}
+.mv h3{font-size:1.15rem}
+.mv p{margin-top:.3rem}
+blockquote{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:2.2rem}
+blockquote p{font-family:var(--display);font-size:1.4rem;line-height:1.35;font-weight:500;color:var(--ink)!important}
+blockquote footer{margin-top:1.4rem;color:var(--muted);font-size:.95rem}
+blockquote footer strong{color:var(--ink);display:block;font-size:1rem}
+.markets{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.markets span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.4rem .95rem;font-weight:500;font-size:.95rem}
+
+/* Contact */
+.contact{background:var(--slate);color:var(--on-dark)}
+.contact .section-head p{color:var(--on-dark);opacity:.8}
+.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem}
+.contact dl{margin:0;display:grid;gap:1.4rem}
+.contact dt{font-size:.9rem;opacity:.65}
+.contact dd{margin:.2rem 0 0;font-size:1.1rem;font-weight:500}
+.contact dd a{text-decoration:none}
+.contact dd a:hover{color:var(--saffron)}
+form{background:var(--surface);color:var(--ink);border-radius:20px;padding:2rem;display:grid;gap:1rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.92rem}
+input,select,textarea{font:inherit;font-weight:400;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:.75rem .85rem;width:100%}
+textarea{min-height:120px;resize:vertical}
+form .btn{border:none;cursor:pointer;font-size:1rem;justify-self:start}
+.form-note{font-size:.88rem;color:var(--muted)}
+.wa{display:inline-flex;align-items:center;gap:.5rem;margin-top:2rem;background:#25D366;color:#08321a;padding:.8rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:600}
+
+footer.site{padding:2rem 0;background:var(--ink);color:var(--paper);font-size:.92rem}
+:root[data-theme="dark"] footer.site, :root:not([data-theme="light"]) footer.site{}
+footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;opacity:.8}
+
+/* Responsive */
+@media (max-width: 900px){
+  nav{display:none}
+  nav.open{display:block;position:absolute;left:0;right:0;top:64px;background:var(--slate);padding:1rem 1.25rem 1.5rem}
+  nav.open ul{flex-direction:column;gap:1rem}
+  .menu-btn{display:inline-block}
+  .nav-cta{display:none}
+  .section-head,.products,.service-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .product.feature{grid-template-columns:56px 1fr}
+  .product.feature .rice-list{grid-column:1 / -1}
+  section{padding:4rem 0}
+}
+@media (max-width: 520px){
+  .row2,.rice-list{grid-template-columns:1fr}
+  .product.feature{padding:1.4rem}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="SACO International home">
+      <svg class="saco-logo" viewBox="0 0 210 56" width="190" height="51" aria-hidden="true">
+        <!-- globe -->
+        <g fill="none" stroke="currentColor" stroke-width="1.8">
+          <circle cx="24" cy="27" r="15"/>
+          <ellipse cx="24" cy="27" rx="6.5" ry="15"/>
+          <path d="M9 27h30M11.5 19h25M11.5 35h25"/>
+        </g>
+        <!-- swoosh -->
+        <path d="M2 42 C 18 46, 40 34, 58 10" fill="none" stroke="var(--saffron)" stroke-width="3.2" stroke-linecap="round"/>
+        <!-- plane -->
+        <path d="M56 6 l8 -3 -3 8 -2 -3 -3 -2z" fill="var(--saffron)"/>
+        <!-- ship -->
+        <path d="M30 46 h22 l-3 5 h-17z" fill="currentColor"/>
+        <rect x="36" y="41" width="9" height="5" fill="currentColor"/>
+        <rect x="46" y="42.5" width="3" height="3.5" fill="currentColor"/>
+        <!-- wordmark -->
+        <text x="70" y="35" font-family="Bricolage Grotesque, system-ui, sans-serif" font-weight="800" font-size="30" letter-spacing="1.5" fill="currentColor">SACO</text>
+        <text x="71" y="49" font-family="Public Sans, system-ui, sans-serif" font-weight="600" font-size="9.5" letter-spacing="3.1" fill="currentColor" opacity=".85">INTERNATIONAL</text>
+        <path d="M70 39.5 h108" stroke="var(--saffron)" stroke-width="1.6"/>
+      </svg>
+    </a>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="#contact">Request a quote</a>
+    <button class="menu-btn" aria-controls="nav" aria-expanded="false" id="menuBtn">Menu</button>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <h1 id="hero-title">Pakistan's finest goods, traded with the world.</h1>
+      <p class="hero-lede">SACO International is an import, export and wholesale company based in Peshawar. We supply rice, tea, spices, fresh and dry fruits, carpets and gems to buyers across Europe, the UK, Australia, China and the Middle East, and we handle transit trade through Pakistan.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Request a quote</a>
+        <a class="btn btn-ghost" href="#products">See our products</a>
+      </div>
+
+      <div class="route">
+        <p class="route-caption">From source to your port, through Peshawar</p>
+        <div class="route-scroll">
+        <svg viewBox="0 0 1100 220" role="img" aria-label="Trade route from Afghanistan through Torkham and Peshawar to Karachi port, then on to the UK, Europe, the Middle East, China and Australia">
+          <g fill="none" stroke-linecap="round">
+            <path class="path" d="M40 110 H200 H360 H560 C 640 110 660 110 700 110" stroke="#E3742A" stroke-width="4"/>
+            <path class="path" d="M700 110 C 800 110 820 30 1040 30" stroke="#E3742A" stroke-width="2.5" opacity=".85"/>
+            <path class="path" d="M700 110 C 800 110 820 70 1040 70" stroke="#E3742A" stroke-width="2.5" opacity=".85"/>
+            <path class="path" d="M700 110 H1040" stroke="#E3742A" stroke-width="2.5" opacity=".85"/>
+            <path class="path" d="M700 110 C 800 110 820 150 1040 150" stroke="#E3742A" stroke-width="2.5" opacity=".85"/>
+            <path class="path" d="M700 110 C 800 110 820 190 1040 190" stroke="#E3742A" stroke-width="2.5" opacity=".85"/>
+          </g>
+          <g fill="#F4F3F7" font-family="Public Sans, system-ui, sans-serif">
+            <circle cx="40" cy="110" r="7"/><text x="40" y="150" text-anchor="middle" font-size="15" opacity=".8">Afghanistan</text>
+            <circle cx="200" cy="110" r="7"/><text x="200" y="150" text-anchor="middle" font-size="15" opacity=".8">Torkham</text>
+            <circle cx="360" cy="110" r="16" fill="#E3742A"/><circle cx="360" cy="110" r="6" fill="#3B3850"/>
+            <text x="360" y="70" text-anchor="middle" font-size="20" font-weight="700" font-family="Bricolage Grotesque, system-ui, sans-serif">Peshawar</text>
+            <text x="360" y="158" text-anchor="middle" font-size="14" opacity=".7">Our base</text>
+            <circle cx="560" cy="110" r="7"/><text x="560" y="150" text-anchor="middle" font-size="15" opacity=".8">Karachi port</text>
+            <g font-size="15">
+              <circle cx="1040" cy="30" r="5"/><text x="1052" y="35">UK</text>
+              <circle cx="1040" cy="70" r="5"/><text x="1052" y="75">Europe</text>
+              <circle cx="1040" cy="110" r="5"/><text x="1052" y="115">Middle East</text>
+              <circle cx="1040" cy="150" r="5"/><text x="1052" y="155">China</text>
+              <circle cx="1040" cy="190" r="5"/><text x="1052" y="195">Australia</text>
+            </g>
+          </g>
+        </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" aria-labelledby="products-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="products-title">What we supply</h2>
+        <p>Every order is packed and labelled to your requirements, from a single unit to full container loads measured in metric tons.</p>
+      </div>
+
+      <div class="products">
+        <article class="product feature">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="var(--saffron)" opacity=".15"/><g fill="var(--saffron)"><ellipse cx="22" cy="20" rx="3" ry="8" transform="rotate(-25 22 20)"/><ellipse cx="33" cy="22" rx="3" ry="8" transform="rotate(20 33 22)"/><ellipse cx="26" cy="35" rx="3" ry="8" transform="rotate(-10 26 35)"/><ellipse cx="37" cy="36" rx="3" ry="8" transform="rotate(35 37 36)"/></g></svg>
+          <div>
+            <h3>Rice</h3>
+            <p>Our core business. We export Pakistani rice under our own brands and to buyer specifications, with a full range of grades, packing, branding and logistics.</p>
+          </div>
+          <ul class="rice-list">
+            <li>Super Basmati</li>
+            <li>Sella (parboiled) rice</li>
+            <li>IRRI-6</li>
+            <li>Broken rice</li>
+            <li>Private label packing</li>
+            <li>Bulk and retail bags</li>
+          </ul>
+        </article>
+
+        <article class="product">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="var(--saffron)" opacity=".15"/><path d="M28 14c8 6 8 22 0 28-8-6-8-22 0-28z" fill="var(--saffron)"/><path d="M28 18v22" stroke="var(--paper)" stroke-width="1.5"/></svg>
+          <div>
+            <h3>Tea</h3>
+            <p>Green tea and black tea, supplied loose or packed.</p>
+          </div>
+        </article>
+
+        <article class="product">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="var(--saffron)" opacity=".15"/><path d="M16 30h24a12 12 0 0 1-24 0z" fill="var(--saffron)"/><circle cx="24" cy="25" r="3" fill="var(--saffron-deep)"/><circle cx="31" cy="24" r="3.5" fill="var(--saffron-deep)"/></svg>
+          <div>
+            <h3>Spices</h3>
+            <p>Ground spices and ready blends, including salan masala and other traditional mixes.</p>
+          </div>
+        </article>
+
+        <article class="product">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="var(--saffron)" opacity=".15"/><path d="M20 34c-2-10 6-18 14-16 6 2 6 12-2 18-5 4-11 3-12-2z" fill="var(--saffron)"/><path d="M33 18c1-3 3-4 5-4" stroke="var(--saffron-deep)" stroke-width="2" fill="none"/></svg>
+          <div>
+            <h3>Fresh fruits</h3>
+            <p>Seasonal Pakistani fruit for export, led by our mangoes.</p>
+          </div>
+        </article>
+
+        <article class="product">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="var(--saffron)" opacity=".15"/><ellipse cx="22" cy="28" rx="7" ry="9" fill="var(--saffron)"/><ellipse cx="34" cy="29" rx="5" ry="7" fill="var(--saffron-deep)"/></svg>
+          <div>
+            <h3>Dry fruits</h3>
+            <p>Dry fruits from Afghanistan exported through transit to Australia and China, with packing, storage and logistics handled for you.</p>
+          </div>
+        </article>
+
+        <article class="product">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="var(--saffron)" opacity=".15"/><rect x="16" y="16" width="24" height="24" rx="2" fill="var(--saffron)"/><path d="M28 20l6 8-6 8-6-8z" fill="var(--paper)"/></svg>
+          <div>
+            <h3>Carpets</h3>
+            <p>Hand-knotted and machine-made carpets and rugs for importers and retailers.</p>
+          </div>
+        </article>
+
+        <article class="product">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="var(--saffron)" opacity=".15"/><path d="M20 22h16l5 6-13 14-13-14z" fill="var(--saffron)"/><path d="M15 28h26M24 22l4 20 4-20" stroke="var(--paper)" stroke-width="1.3" fill="none"/></svg>
+          <div>
+            <h3>Gems</h3>
+            <p>Precious and semi-precious stones from the region, sourced for trade buyers.</p>
+          </div>
+        </article>
+
+        <article class="product">
+          <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="var(--saffron)" opacity=".15"/><path d="M16 26h24v6a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z" fill="var(--saffron)"/><path d="M40 28h4" stroke="var(--saffron)" stroke-width="3"/></svg>
+          <div>
+            <h3>Kitchenware and leather</h3>
+            <p>Plastic, aluminium and steel kitchenware with custom labelling, and leather garments made to order.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="services-title">How we work with you</h2>
+        <p>Beyond our own products, we source goods from around the world for our clients and negotiate on their behalf. Our consultation fee is agreed with you up front.</p>
+      </div>
+      <div class="service-grid">
+        <ol class="steps">
+          <li><div><h3>Tell us what you need</h3><p>Share the product and the quantity, whether that's a single unit or many metric tons.</p></div></li>
+          <li><div><h3>We find the right supplier</h3><p>We check suppliers worldwide and give you a shortlist with our recommendation.</p></div></li>
+          <li><div><h3>We negotiate the price</h3><p>Our team agrees price and terms with the supplier on your behalf.</p></div></li>
+          <li><div><h3>You receive your goods</h3><p>We follow the order through shipping until it reaches you and you're satisfied.</p></div></li>
+        </ol>
+        <aside class="transit" aria-labelledby="transit-title">
+          <h3 id="transit-title">Transit trade through Pakistan</h3>
+          <p>From our base in Peshawar, close to the Torkham border, we move goods by road between Afghanistan, Pakistan and onward markets.</p>
+          <ul>
+            <li>Road transport on established drive routes</li>
+            <li>Customs and transit documentation</li>
+            <li>Storage and repacking</li>
+            <li>Onward shipping through Karachi</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="wrap about-grid">
+      <div>
+        <h2 id="about-title">A family business, trading worldwide</h2>
+        <p style="margin-top:1.4rem">SACO International is a family-owned import, export and wholesale company. We started in rice and have grown into food, textiles and consumer goods, while keeping the values we began with: fairness, honesty and trust in every deal.</p>
+        <p>Our team handles each order personally, from finding the product to the moment it reaches our customer.</p>
+        <div class="mv">
+          <div><h3>Our mission</h3><p>To connect buyers and suppliers across countries, delivering quality goods at the best price.</p></div>
+          <div><h3>Our vision</h3><p>To be Pakistan's most trusted importer and wholesaler, and to export to every corner of the world.</p></div>
+        </div>
+        <div class="markets" aria-label="Markets we serve">
+          <span>United Kingdom</span><span>Europe</span><span>Australia</span><span>China</span><span>Middle East</span>
+        </div>
+      </div>
+      <blockquote>
+        <p>We bring our traditional family values of fairness, honesty and trust to modern ways of working. In our business, the relationship comes first.</p>
+        <footer><strong>Mr. Janas Khan</strong>Managing Partner, SACO International</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="contact-title">Request a quote</h2>
+        <p>Tell us the product, quantity and destination. We usually reply within one business day.</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <dl>
+            <div><dt>Office</dt><dd>Room #02, 3rd Floor, Umar Tower,<br>Jail Pul Road, Khyber Bazar,<br>Peshawar, Pakistan</dd></div>
+            <div><dt>Phone and WhatsApp</dt><dd><a href="tel:+923362233444">+92 336 2233444</a><br><a href="tel:+923148000536">+92 314 8000536</a></dd></div>
+            <div><dt>Landline</dt><dd><a href="tel:+92912210593">+92 91 2210593</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:info@sacoint.com">info@sacoint.com</a><br><a href="mailto:janas@sacoint.com">janas@sacoint.com</a></dd></div>
+          </dl>
+          <a class="wa" href="https://wa.me/923362233444" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <form id="quoteForm" novalidate>
+          <div class="row2">
+            <label>Your name<input name="name" required autocomplete="name"></label>
+            <label>Company<input name="company" autocomplete="organization"></label>
+          </div>
+          <div class="row2">
+            <label>Email<input type="email" name="email" required autocomplete="email"></label>
+            <label>Country<input name="country" autocomplete="country-name"></label>
+          </div>
+          <div class="row2">
+            <label>Product
+              <select name="product">
+                <option>Rice</option><option>Tea</option><option>Spices</option><option>Fresh fruits</option>
+                <option>Dry fruits</option><option>Carpets</option><option>Gems</option><option>Kitchenware or leather</option>
+                <option>Sourcing or transit service</option><option>Something else</option>
+              </select>
+            </label>
+            <label>Quantity<input name="qty" placeholder="For example, 2 containers or 50 MT"></label>
+          </div>
+          <label>Details<textarea name="msg" placeholder="Grade, packing, destination port, delivery date"></textarea></label>
+          <button class="btn btn-primary" type="submit">Send enquiry</button>
+          <p class="form-note" id="formNote">This opens your email app with the enquiry filled in.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 SACO International, Peshawar, Pakistan</span>
+    <span>Import, export and wholesale</span>
+  </div>
+</footer>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open'); btn.setAttribute('aria-expanded', false);
+  }));
+
+  document.getElementById('quoteForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target, note = document.getElementById('formNote');
+    if (!f.name.value.trim() || !f.email.value.includes('@')) {
+      note.textContent = 'Add your name and a valid email address so we can reply.';
+      note.style.color = 'var(--saffron-deep)';
+      return;
+    }
+    const body = `Name: ${f.name.value}\nCompany: ${f.company.value}\nEmail: ${f.email.value}\nCountry: ${f.country.value}\nProduct: ${f.product.value}\nQuantity: ${f.qty.value}\n\n${f.msg.value}`;
+    window.location.href = 'mailto:info@sacoint.com?subject=' + encodeURIComponent('Quote request: ' + f.product.value) + '&body=' + encodeURIComponent(body);
+    note.textContent = 'Your email app should open now with the enquiry ready to send.';
+    note.style.color = '';
+  });
+</script>
+</body>
+</html>
