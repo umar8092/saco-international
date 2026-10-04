@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231C1A27'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Arial' font-weight='800' font-size='20' fill='%23F08A42'%3ES%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SACO International | Rice, Tea, Spices &amp; Trade from Pakistan">
+<meta property="og:description" content="Import, export and wholesale from Pakistan. Rice, tea, spices, fruits, charcoal, carpets and gems, plus sourcing of any product from any country.">
+<meta property="og:url" content="https://umar8092.github.io/saco-international/">
+<meta property="og:image" content="https://umar8092.github.io/saco-international/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <title>SACO International | Rice, Tea, Spices &amp; Trade from Pakistan</title>
 <meta name="description" content="SACO International is a Pakistan-based import, export and wholesale company supplying rice, tea, spices, fruits, charcoal, carpets and gems to buyers worldwide, and sourcing any product from any country.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,6 +84,8 @@ nav a:hover{opacity:1;color:var(--saffron)}
 .route{margin-top:3.5rem;padding:2rem 0 2.5rem;border-top:1px solid rgba(244,243,247,.14)}
 .route-caption{font-size:.95rem;opacity:.7;margin-bottom:1rem}
 .route-scroll{overflow-x:auto}
+.route-hint{display:none;font-size:.85rem;opacity:.6;margin:.5rem 0 0}
+@media (max-width:900px){.route-hint{display:block}}
 .route svg{display:block;min-width:760px;width:100%;height:auto}
 .route .path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.4s ease-out .3s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
@@ -93,6 +103,7 @@ section{padding:5.5rem 0}
 .product p{color:var(--muted);margin-top:.45rem}
 .product .items{margin-top:.6rem;font-size:.95rem;color:var(--ink);font-weight:500}
 .product.feature{grid-column:1 / -1;grid-template-columns:56px 1fr 1fr;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:2rem;margin-bottom:1.5rem}
+.product.wide{grid-column:1 / -1}
 .product.feature h3{font-size:1.9rem}
 .rice-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 1.2rem;align-content:start}
 .rice-list li{padding-left:1rem;position:relative;font-weight:500}
@@ -143,9 +154,9 @@ form .btn{border:none;cursor:pointer;font-size:1rem;justify-self:start}
 .form-note{font-size:.88rem;color:var(--muted)}
 .wa{display:inline-flex;align-items:center;gap:.5rem;margin-top:2rem;background:#25D366;color:#08321a;padding:.8rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:600}
 
-footer.site{padding:2rem 0;background:var(--ink);color:var(--paper);font-size:.92rem}
+footer.site{padding:2rem 0;background:var(--surface);color:var(--muted);border-top:1px solid var(--line);font-size:.92rem}
 :root[data-theme="dark"] footer.site, :root:not([data-theme="light"]) footer.site{}
-footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;opacity:.8}
+footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
 
 /* Responsive */
 @media (max-width: 900px){
@@ -256,6 +267,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
           </g>
         </svg>
         </div>
+        <p class="route-hint">Swipe sideways to see the full route</p>
       </div>
     </div>
   </section>
@@ -312,7 +324,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
           <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="var(--saffron)" opacity=".15"/><ellipse cx="22" cy="28" rx="7" ry="9" fill="var(--saffron)"/><ellipse cx="34" cy="29" rx="5" ry="7" fill="var(--saffron-deep)"/></svg>
           <div>
             <h3>Dry fruits</h3>
-            <p>Dry fruits from Afghanistan exported through transit to Australia and China, with packing, storage and logistics handled for you.</p>
+            <p>Dry fruits from Afghanistan exported through transit to markets worldwide, including Australia and China, with packing, storage and logistics handled for you.</p>
           </div>
         </article>
 
@@ -348,7 +360,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
           </div>
         </article>
 
-        <article class="product">
+        <article class="product wide">
           <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="27" fill="var(--saffron)" opacity=".15"/><circle cx="28" cy="28" r="12" fill="none" stroke="var(--saffron)" stroke-width="3"/><path d="M16 28h24M28 16c-6 6-6 18 0 24M28 16c6 6 6 18 0 24" stroke="var(--saffron)" stroke-width="1.6" fill="none"/></svg>
           <div>
             <h3>Anything, from anywhere</h3>
@@ -397,7 +409,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
           <div><h3>Our vision</h3><p>To be Pakistan's most trusted importer and wholesaler, and to export to every corner of the world.</p></div>
         </div>
         <div class="markets" aria-label="Markets we serve">
-          <span>United Kingdom</span><span>Europe</span><span>Australia</span><span>China</span><span>Middle East</span>
+          <span>United Kingdom</span><span>Europe</span><span>Australia</span><span>China</span><span>Middle East</span><span>Worldwide</span>
         </div>
       </div>
       <blockquote>
@@ -444,7 +456,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
                 <option>Sourcing from any country</option><option>Transit service</option><option>Something else</option>
               </select>
             </label>
-            <label>Quantity<input name="qty" placeholder="For example, 2 containers or 50 MT"></label>
+            <label>Quantity<input name="qty" placeholder="e.g. 2 containers"></label>
           </div>
           <label>Details<textarea name="msg" placeholder="Grade, packing, destination port, delivery date"></textarea></label>
           <button class="btn btn-primary" type="submit">Send enquiry</button>
