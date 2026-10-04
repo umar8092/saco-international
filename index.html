@@ -84,9 +84,9 @@ nav a:hover{opacity:1;color:var(--saffron)}
 .route{margin-top:3.5rem;padding:2rem 0 2.5rem;border-top:1px solid rgba(244,243,247,.14)}
 .route-caption{font-size:.95rem;opacity:.7;margin-bottom:1rem}
 .route-scroll{overflow-x:auto}
-.route-hint{display:none;font-size:.85rem;opacity:.6;margin:.5rem 0 0}
-@media (max-width:900px){.route-hint{display:block}}
-.route svg{display:block;min-width:760px;width:100%;height:auto}
+@media (max-width:760px){.route-scroll{display:none}.route .route-mobile{display:block}}
+.route svg{display:block;width:100%;height:auto}
+.route .route-mobile{display:none;max-width:420px;margin-inline:auto}
 .route .path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.4s ease-out .3s forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
 @media (prefers-reduced-motion: reduce){.route .path{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
@@ -267,7 +267,43 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
           </g>
         </svg>
         </div>
-        <p class="route-hint">Swipe sideways to see the full route</p>
+        <svg class="route-mobile" viewBox="0 0 360 650" aria-hidden="true">
+          <g fill="none" stroke-linecap="round" stroke="#E3742A">
+            <path class="path" d="M90 92 V150 C 90 200 180 200 180 250" stroke-width="3"/>
+            <path class="path" d="M270 92 V150 C 270 200 180 200 180 250" stroke-width="3"/>
+            <path class="path" d="M180 250 V360 C 180 395 40 385 40 420 V610" stroke-width="4"/>
+            <g stroke-width="2.5" opacity=".85">
+              <path class="path" d="M40 420 H70"/><path class="path" d="M40 458 H70"/><path class="path" d="M40 496 H70"/>
+              <path class="path" d="M40 534 H70"/><path class="path" d="M40 572 H70"/><path class="path" d="M40 610 H70"/>
+            </g>
+          </g>
+          <g fill="#F4F3F7" font-family="Public Sans, system-ui, sans-serif" text-anchor="middle">
+            <circle cx="90" cy="92" r="7"/>
+            <text x="90" y="26" font-size="15" font-weight="600">Afghanistan</text>
+            <text x="90" y="50" font-size="12" opacity=".7">Dry fruits</text>
+            <text x="90" y="66" font-size="12" opacity=".7">Carpets · Gems</text>
+            <circle cx="90" cy="150" r="6"/><text x="104" y="155" font-size="13" opacity=".8" text-anchor="start">Torkham</text>
+
+            <circle cx="270" cy="92" r="7"/>
+            <text x="270" y="26" font-size="15" font-weight="600">Made in Pakistan</text>
+            <text x="270" y="50" font-size="12" opacity=".7">Rice · Tea · Spices</text>
+            <text x="270" y="66" font-size="12" opacity=".7">Mangoes · Charcoal</text>
+
+            <circle cx="180" cy="250" r="14" fill="#E3742A"/><circle cx="180" cy="250" r="5" fill="#3B3850"/>
+            <text x="204" y="248" font-size="18" font-weight="700" text-anchor="start" font-family="Bricolage Grotesque, system-ui, sans-serif">Pakistan</text>
+            <text x="204" y="266" font-size="12" opacity=".7" text-anchor="start">Our base</text>
+            <circle cx="180" cy="320" r="6"/><text x="196" y="325" font-size="14" opacity=".8" text-anchor="start">Karachi port</text>
+
+            <g font-size="15" text-anchor="start">
+              <circle cx="70" cy="420" r="5"/><text x="84" y="425">UK</text>
+              <circle cx="70" cy="458" r="5"/><text x="84" y="463">Europe</text>
+              <circle cx="70" cy="496" r="5"/><text x="84" y="501">Middle East</text>
+              <circle cx="70" cy="534" r="5"/><text x="84" y="539">China</text>
+              <circle cx="70" cy="572" r="5"/><text x="84" y="577">Australia</text>
+              <circle cx="70" cy="610" r="5" fill="#E3742A"/><text x="84" y="615" font-weight="700">Worldwide</text>
+            </g>
+          </g>
+        </svg>
       </div>
     </div>
   </section>
