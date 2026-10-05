@@ -641,7 +641,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
       o.p.setAttribute("stroke-dasharray",e+" 2"); o.p.setAttribute("opacity",k<1?.9:(1.25-k)*3.6);
       var l=o.L*e,P=o.p.getPointAtLength(l),Q=o.p.getPointAtLength(Math.min(l+2,o.L)),ang=Math.atan2(Q.y-P.y,Q.x-P.x)*180/Math.PI,fl=1;
       if(l+2>o.L){Q=o.p.getPointAtLength(o.L);P=o.p.getPointAtLength(o.L-2);ang=Math.atan2(Q.y-P.y,Q.x-P.x)*180/Math.PI}
-      if(Math.abs(ang)>90){ang+=180;fl=-1}
+      if(Math.abs(ang)>90) fl=-1;
       o.v.setAttribute("transform","translate("+Q.x+" "+Q.y+") rotate("+ang+") scale(1.5 "+1.5*fl+")");
       o.v.setAttribute("opacity",k<1?Math.min(1,k*8):Math.max(0,(1.1-k)*8));
       return true;
