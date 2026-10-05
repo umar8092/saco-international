@@ -631,10 +631,10 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
   var SHIP='<path d="M-15 0h30l-5 7h-20z" fill="#F4F3F7"/><rect x="-11" y="-6" width="6" height="6" fill="#E3742A"/><rect x="-4" y="-6" width="6" height="6" fill="#FFC999"/><rect x="3" y="-6" width="6" height="6" fill="#E3742A"/><rect x="10" y="-9" width="3.5" height="9" fill="#F4F3F7"/>';
   var PLANE='<path d="M15 0L6-2-2-12h-3L0-2h-10l-3-4h-2l3 6-3 6h2l3-4h10l-5 10h3L6 2z" fill="#F4F3F7"/>';
   /* ships follow hand-placed sea lanes (open water on this dot map); shortest route through the lane graph */
-  var W={UKa:[105,46],WN:[40,58],WS:[30,140],WE:[5,190],WE2:[5,250],USa:[22,275],PAC:[30,330],PAC2:[60,420],PAC3:[100,485],BTM:[300,495],BTM2:[440,495],
-    Br0:[310,385],Br1:[300,430],Br2:[290,470],I:[440,330],AS:[415,255],Pk0:[425,205],ME0:[385,190],ME1:[390,215],Au0:[645,440],Au1:[600,440],Au2:[500,440],Au3:[440,440],
-    Ch0:[705,150],Ch1:[715,250],Ch2:[720,330],Ch3:[680,370],Ch4:[560,375],Ch5:[460,360],Jp0:[770,150],Jp1:[715,172],Eu0:[165,95],Eu1:[165,110],Eu2:[110,120],Eu3:[85,132]},
-    E="UKa-WN WN-WS WS-WE WE-WE2 WE2-USa USa-PAC PAC-PAC2 PAC2-PAC3 PAC3-BTM BTM-BTM2 BTM-Br2 Br2-Br1 Br1-Br0 BTM2-Au3 Au3-I Au3-Au2 Au2-Au1 Au1-Au0 I-AS AS-Pk0 AS-ME1 ME1-ME0 I-Ch5 Ch5-Ch4 Ch4-Ch3 Ch3-Ch2 Ch2-Ch1 Ch1-Ch0 Ch1-Jp1 Jp1-Jp0 Eu0-Eu1 Eu1-Eu2 Eu2-Eu3 Eu3-WS".split(" "),
+  var W={UKa:[45,60],WS:[30,140],WE:[5,190],WE2:[5,250],USa:[22,275],PAC:[30,330],PAC2:[60,420],PAC3:[100,485],BTM:[300,495],
+    Br0:[305,397],Br1:[302,432],Br2:[300,465],I:[440,330],AS:[415,255],Pk0:[425,205],ME0:[385,190],ME1:[390,215],Au0:[645,440],Au1:[600,440],Au2:[500,440],Au3:[440,440],
+    Ch0:[705,150],Ch1:[715,250],Ch2:[720,330],Ch3:[680,370],Ch4:[560,375],Jp0:[770,150],Jp1:[715,172],Eu0:[165,95],Eu1:[165,110],Eu2:[110,120],Eu3:[85,132]},
+    E="UKa-WS WS-WE WE-WE2 WE2-USa USa-PAC PAC-PAC2 PAC2-PAC3 PAC3-BTM BTM-Au3 BTM-Br2 Br2-Br1 Br1-Br0 Au3-I Br2-Au3 Au3-Ch4 Au3-Au2 Au2-Au1 Au1-Au0 I-AS AS-Pk0 AS-ME1 ME1-ME0 I-Ch4 Ch0-Jp0 Au2-Ch4 Au1-Ch3 ME1-Pk0 Ch4-Ch3 Ch3-Ch2 Ch2-Ch1 Ch1-Ch0 Ch1-Jp1 Jp1-Jp0 Eu0-Eu1 Eu1-Eu2 Eu2-Eu3 Eu3-WS".split(" "),
     PORT={UK:"UKa",Europe:"Eu0",USA:"USa","Middle East":"ME0",Pakistan:"Pk0",Brazil:"Br0",China:"Ch0",Japan:"Jp0",Australia:"Au0"}, ADJ={}, SEA={};
   E.forEach(function(e){var p=e.split("-");(ADJ[p[0]]=ADJ[p[0]]||[]).push(p[1]);(ADJ[p[1]]=ADJ[p[1]]||[]).push(p[0])});
   function seaPath(a,b){
