@@ -299,6 +299,8 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
               <circle cx="1000" cy="270" r="5" fill="#E3742A"/><text x="1012" y="275" font-weight="700">Worldwide</text>
             </g>
           </g>
+          <g class="truck" data-d="M30 70 H250 C 320 70 340 150 400 150 H580" data-t="7" data-p="0" opacity="0"><rect x="-14" y="-7" width="18" height="11" rx="1.5" fill="#F4F3F7"/><path d="M6 -3h6l3 4v3H6z" fill="#FFC999"/><g fill="#2A2838" stroke="#F4F3F7" stroke-width="1"><circle cx="-8" cy="4" r="2.6"/><circle cx="0" cy="4" r="2.6"/><circle cx="10" cy="4" r="2.6"/></g></g>
+<g class="truck" data-d="M30 230 H250 C 320 230 340 150 400 150 H580" data-t="7" data-p="3.5" opacity="0"><rect x="-14" y="-7" width="18" height="11" rx="1.5" fill="#F4F3F7"/><path d="M6 -3h6l3 4v3H6z" fill="#FFC999"/><g fill="#2A2838" stroke="#F4F3F7" stroke-width="1"><circle cx="-8" cy="4" r="2.6"/><circle cx="0" cy="4" r="2.6"/><circle cx="10" cy="4" r="2.6"/></g></g>
         </svg>
         </div>
         <svg class="route-mobile" viewBox="0 0 360 650" aria-hidden="true">
@@ -337,6 +339,8 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
               <circle cx="70" cy="610" r="5" fill="#E3742A"/><text x="84" y="615" font-weight="700">Worldwide</text>
             </g>
           </g>
+          <g class="truck" data-d="M90 92 V150 C 90 200 180 200 180 250 V320" data-t="6" data-p="0" opacity="0"><rect x="-14" y="-7" width="18" height="11" rx="1.5" fill="#F4F3F7"/><path d="M6 -3h6l3 4v3H6z" fill="#FFC999"/><g fill="#2A2838" stroke="#F4F3F7" stroke-width="1"><circle cx="-8" cy="4" r="2.6"/><circle cx="0" cy="4" r="2.6"/><circle cx="10" cy="4" r="2.6"/></g></g>
+<g class="truck" data-d="M270 92 V150 C 270 200 180 200 180 250 V320" data-t="6" data-p="3" opacity="0"><rect x="-14" y="-7" width="18" height="11" rx="1.5" fill="#F4F3F7"/><path d="M6 -3h6l3 4v3H6z" fill="#FFC999"/><g fill="#2A2838" stroke="#F4F3F7" stroke-width="1"><circle cx="-8" cy="4" r="2.6"/><circle cx="0" cy="4" r="2.6"/><circle cx="10" cy="4" r="2.6"/></g></g>
         </svg>
       </div>
     </div>
@@ -568,6 +572,31 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
     note.textContent = 'Your email app should open now with the enquiry ready to send.';
     note.style.color = '';
   });
+</script>
+<script>
+/* trucks drive the road legs: source -> Pakistan base -> Karachi port */
+(function(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var ns="http://www.w3.org/2000/svg", T=[];
+  document.querySelectorAll(".truck").forEach(function(g){
+    var p=document.createElementNS(ns,"path"); p.setAttribute("d",g.dataset.d); p.setAttribute("fill","none"); g.ownerSVGElement.appendChild(p);
+    T.push({g:g,p:p,L:p.getTotalLength(),dur:g.dataset.t*1000,del:g.dataset.p*1000});
+  });
+  var t0=performance.now();
+  (function tick(now){
+    T.forEach(function(o){
+      var t=(now-t0-o.del);
+      if(t<0){return}
+      var k=(t%(o.dur+1200))/o.dur;           // 1.2s pause at the port
+      if(k>1){o.g.setAttribute("opacity",0);return}
+      var l=o.L*k,a=o.p.getPointAtLength(l),b=o.p.getPointAtLength(Math.min(l+2,o.L)),
+          ang=Math.atan2(b.y-a.y,b.x-a.x)*180/Math.PI;
+      o.g.setAttribute("transform","translate("+a.x+" "+a.y+") rotate("+ang+") scale(1.5)");
+      o.g.setAttribute("opacity",Math.min(1,k*12,(1-k)*12));
+    });
+    requestAnimationFrame(tick);
+  })(performance.now());
+})();
 </script>
 </body>
 </html>
