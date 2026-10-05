@@ -82,11 +82,11 @@ nav a:hover{opacity:1;color:var(--saffron)}
 .btn-ghost:hover{border-color:var(--on-dark)}
 
 .hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem;align-items:center}
-.hero-map{display:none}
+.hero-map{display:block;margin-top:.5rem}
+@media (max-width:999px){.hero-map .land{stroke-width:6}.hero-map .mn{r:7px}.hero-map .ml text{font-size:36px}.hero-map #trips path{stroke-width:4px}}
 @media (min-width:1000px){
   .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
   .hero-grid .hero-copy h1{font-size:clamp(2.5rem,4.4vw,4.4rem)}
-  .hero-map{display:block}
 }
 .hero-map svg{display:block;width:100%;height:auto;overflow:visible}
 .hero-map .land{fill:none;stroke:rgba(244,243,247,.34);stroke-width:3.8;stroke-linecap:round}
@@ -477,14 +477,14 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
               <circle cx="70" cy="610" r="5" fill="#E3742A"/><text x="84" y="615" font-weight="700">Worldwide</text>
             </g>
           </g>
-          <g class="truck" data-d="M90 92 V150 C 90 200 180 200 180 250 V320" data-t="6" data-p="0" data-s="1.2" data-n="1" opacity="0"><rect x="-26" y="3" width="36" height="2.5" rx="1" fill="#2A2838"/><rect x="-25" y="-10" width="31" height="13" rx="1" fill="#4F7CAC"/><path d="M-22-10v13M-18.5-10v13M-15-10v13M-11.5-10v13M-8-10v13M-4.5-10v13M-1-10v13M2.5-10v13" stroke="#3A5F8A" stroke-width="1.3"/><path d="M-25-8.5h31M-25 1.5h31" stroke="#8FB2D8" stroke-width="1"/><path d="M-25-10v13M6-10v13" stroke="#F4F3F7" stroke-width="1.2"/><path d="M10-5h6l5 5v5H10z" fill="#FFC999"/><path d="M12-3.5h3.6l3 3.5H12z" fill="#2A2838"/><g fill="#2A2838" stroke="#F4F3F7" stroke-width="1"><circle cx="-20" cy="6" r="2.7"/><circle cx="-12.5" cy="6" r="2.7"/><circle cx="15" cy="6" r="2.7"/></g></g>
-<g class="truck" data-d="M270 92 V150 C 270 200 180 200 180 250 V320" data-t="6" data-p="3" data-s="1.2" data-n="1" opacity="0"><rect x="-26" y="3" width="36" height="2.5" rx="1" fill="#2A2838"/><rect x="-25" y="-10" width="31" height="13" rx="1" fill="#4F7CAC"/><path d="M-22-10v13M-18.5-10v13M-15-10v13M-11.5-10v13M-8-10v13M-4.5-10v13M-1-10v13M2.5-10v13" stroke="#3A5F8A" stroke-width="1.3"/><path d="M-25-8.5h31M-25 1.5h31" stroke="#8FB2D8" stroke-width="1"/><path d="M-25-10v13M6-10v13" stroke="#F4F3F7" stroke-width="1.2"/><path d="M10-5h6l5 5v5H10z" fill="#FFC999"/><path d="M12-3.5h3.6l3 3.5H12z" fill="#2A2838"/><g fill="#2A2838" stroke="#F4F3F7" stroke-width="1"><circle cx="-20" cy="6" r="2.7"/><circle cx="-12.5" cy="6" r="2.7"/><circle cx="15" cy="6" r="2.7"/></g></g>
-          <g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V420 H66" data-v="45" data-p="0" data-c="18" data-s="1.3" data-ship="1" data-n="1" opacity="0"><path d="M-15 0h30l-5 7h-20z" fill="#F4F3F7"/><rect x="-11" y="-6" width="6" height="6" fill="#E3742A"/><rect x="-4" y="-6" width="6" height="6" fill="#FFC999"/><rect x="3" y="-6" width="6" height="6" fill="#E3742A"/><rect x="10" y="-9" width="3.5" height="9" fill="#F4F3F7"/></g>
-<g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V458 H66" data-v="45" data-p="3" data-c="18" data-s="1.2" opacity="0"><path d="M15 0L6-2-2-12h-3L0-2h-10l-3-4h-2l3 6-3 6h2l3-4h10l-5 10h3L6 2z" fill="#F4F3F7"/></g>
-<g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V496 H66" data-v="45" data-p="6" data-c="18" data-s="1.3" data-ship="1" data-n="1" opacity="0"><path d="M-15 0h30l-5 7h-20z" fill="#F4F3F7"/><rect x="-11" y="-6" width="6" height="6" fill="#E3742A"/><rect x="-4" y="-6" width="6" height="6" fill="#FFC999"/><rect x="3" y="-6" width="6" height="6" fill="#E3742A"/><rect x="10" y="-9" width="3.5" height="9" fill="#F4F3F7"/></g>
-<g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V534 H66" data-v="45" data-p="9" data-c="18" data-s="1.2" opacity="0"><path d="M15 0L6-2-2-12h-3L0-2h-10l-3-4h-2l3 6-3 6h2l3-4h10l-5 10h3L6 2z" fill="#F4F3F7"/></g>
-<g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V572 H66" data-v="45" data-p="12" data-c="18" data-s="1.3" data-ship="1" data-n="1" opacity="0"><path d="M-15 0h30l-5 7h-20z" fill="#F4F3F7"/><rect x="-11" y="-6" width="6" height="6" fill="#E3742A"/><rect x="-4" y="-6" width="6" height="6" fill="#FFC999"/><rect x="3" y="-6" width="6" height="6" fill="#E3742A"/><rect x="10" y="-9" width="3.5" height="9" fill="#F4F3F7"/></g>
-<g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V610 H66" data-v="45" data-p="15" data-c="18" data-s="1.2" opacity="0"><path d="M15 0L6-2-2-12h-3L0-2h-10l-3-4h-2l3 6-3 6h2l3-4h10l-5 10h3L6 2z" fill="#F4F3F7"/></g>
+          <g class="truck" data-d="M90 92 V150 C 90 200 180 200 180 250 V320" data-t="6" data-p="0" data-s=".85" data-n="1" opacity="0"><rect x="-26" y="3" width="36" height="2.5" rx="1" fill="#2A2838"/><rect x="-25" y="-10" width="31" height="13" rx="1" fill="#4F7CAC"/><path d="M-22-10v13M-18.5-10v13M-15-10v13M-11.5-10v13M-8-10v13M-4.5-10v13M-1-10v13M2.5-10v13" stroke="#3A5F8A" stroke-width="1.3"/><path d="M-25-8.5h31M-25 1.5h31" stroke="#8FB2D8" stroke-width="1"/><path d="M-25-10v13M6-10v13" stroke="#F4F3F7" stroke-width="1.2"/><path d="M10-5h6l5 5v5H10z" fill="#FFC999"/><path d="M12-3.5h3.6l3 3.5H12z" fill="#2A2838"/><g fill="#2A2838" stroke="#F4F3F7" stroke-width="1"><circle cx="-20" cy="6" r="2.7"/><circle cx="-12.5" cy="6" r="2.7"/><circle cx="15" cy="6" r="2.7"/></g></g>
+<g class="truck" data-d="M270 92 V150 C 270 200 180 200 180 250 V320" data-t="6" data-p="3" data-s=".85" data-n="1" opacity="0"><rect x="-26" y="3" width="36" height="2.5" rx="1" fill="#2A2838"/><rect x="-25" y="-10" width="31" height="13" rx="1" fill="#4F7CAC"/><path d="M-22-10v13M-18.5-10v13M-15-10v13M-11.5-10v13M-8-10v13M-4.5-10v13M-1-10v13M2.5-10v13" stroke="#3A5F8A" stroke-width="1.3"/><path d="M-25-8.5h31M-25 1.5h31" stroke="#8FB2D8" stroke-width="1"/><path d="M-25-10v13M6-10v13" stroke="#F4F3F7" stroke-width="1.2"/><path d="M10-5h6l5 5v5H10z" fill="#FFC999"/><path d="M12-3.5h3.6l3 3.5H12z" fill="#2A2838"/><g fill="#2A2838" stroke="#F4F3F7" stroke-width="1"><circle cx="-20" cy="6" r="2.7"/><circle cx="-12.5" cy="6" r="2.7"/><circle cx="15" cy="6" r="2.7"/></g></g>
+          <g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V420 H66" data-v="45" data-p="0" data-c="18" data-s="1" data-ship="1" data-n="1" opacity="0"><path d="M-15 0h30l-5 7h-20z" fill="#F4F3F7"/><rect x="-11" y="-6" width="6" height="6" fill="#E3742A"/><rect x="-4" y="-6" width="6" height="6" fill="#FFC999"/><rect x="3" y="-6" width="6" height="6" fill="#E3742A"/><rect x="10" y="-9" width="3.5" height="9" fill="#F4F3F7"/></g>
+<g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V458 H66" data-v="45" data-p="3" data-c="18" data-s="1" opacity="0"><path d="M15 0L6-2-2-12h-3L0-2h-10l-3-4h-2l3 6-3 6h2l3-4h10l-5 10h3L6 2z" fill="#F4F3F7"/></g>
+<g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V496 H66" data-v="45" data-p="6" data-c="18" data-s="1" data-ship="1" data-n="1" opacity="0"><path d="M-15 0h30l-5 7h-20z" fill="#F4F3F7"/><rect x="-11" y="-6" width="6" height="6" fill="#E3742A"/><rect x="-4" y="-6" width="6" height="6" fill="#FFC999"/><rect x="3" y="-6" width="6" height="6" fill="#E3742A"/><rect x="10" y="-9" width="3.5" height="9" fill="#F4F3F7"/></g>
+<g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V534 H66" data-v="45" data-p="9" data-c="18" data-s="1" opacity="0"><path d="M15 0L6-2-2-12h-3L0-2h-10l-3-4h-2l3 6-3 6h2l3-4h10l-5 10h3L6 2z" fill="#F4F3F7"/></g>
+<g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V572 H66" data-v="45" data-p="12" data-c="18" data-s="1" data-ship="1" data-n="1" opacity="0"><path d="M-15 0h30l-5 7h-20z" fill="#F4F3F7"/><rect x="-11" y="-6" width="6" height="6" fill="#E3742A"/><rect x="-4" y="-6" width="6" height="6" fill="#FFC999"/><rect x="3" y="-6" width="6" height="6" fill="#E3742A"/><rect x="10" y="-9" width="3.5" height="9" fill="#F4F3F7"/></g>
+<g class="truck" data-d="M180 320 V360 C 180 395 40 385 40 420 V610 H66" data-v="45" data-p="15" data-c="18" data-s="1" opacity="0"><path d="M15 0L6-2-2-12h-3L0-2h-10l-3-4h-2l3 6-3 6h2l3-4h10l-5 10h3L6 2z" fill="#F4F3F7"/></g>
         </svg>
       </div>
     </div>
@@ -625,7 +625,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
   var LANDPAIR={"Afghanistan-Pakistan":1,"Afghanistan-Middle East":1,"Europe-UK":1,"Canada-USA":1,"Egypt-Middle East":1,"Europe-Russia":1}, K=Object.keys(N), live=[], H=g.closest(".hero-map"), TX={};
   H.classList.add("anim"); H.querySelectorAll(".ml text").forEach(function(t){TX[t.textContent]=t});
   function lab(n,on){if(TX[n])TX[n].classList.toggle("on",on)}
-  var HOV=null;   // hovering a dot shows its name
+  var HOV=null, MU=1;   // hovering a dot shows its name
   H.querySelectorAll("circle.mn").forEach(function(c){
     var n=Object.keys(N).filter(function(k){return N[k][0]==c.getAttribute("cx")&&N[k][1]==c.getAttribute("cy")})[0]; if(!n) return;
     c.setAttribute("stroke","transparent"); c.setAttribute("stroke-width",22); c.setAttribute("pointer-events","all"); c.style.cursor="pointer";
@@ -659,6 +659,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
     live.push({a:a,b:b,p:p,v:v,L:p.getTotalLength(),t0:performance.now()+900,dur:(mode==="plane"?2800:4800)*Math.max(.55,d/500)+1800});
   }
   (function tick(now){
+    MU=Math.max(1,(840/(g.ownerSVGElement.clientWidth||840))/1.7);   // keep vehicles a readable size when the map is narrow (phones)
     live=live.filter(function(o){
       var k=(now-o.t0)/o.dur; if(k<0) return true; var  m=Math.min(k,1), e=m<.5?2*m*m:1-Math.pow(-2*m+2,2)/2;
       if(k>=1.25){o.p.remove();o.v.remove();o.done=1;return false}
@@ -666,9 +667,9 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
       var l=o.L*e,P=o.p.getPointAtLength(l),Q=o.p.getPointAtLength(Math.min(l+2,o.L)),ang=Math.atan2(Q.y-P.y,Q.x-P.x)*180/Math.PI,fl=1;
       if(l+2>o.L){Q=o.p.getPointAtLength(o.L);P=o.p.getPointAtLength(o.L-2);ang=Math.atan2(Q.y-P.y,Q.x-P.x)*180/Math.PI}
       if(Math.abs(ang)>90) fl=-1;
-      var tr="rotate("+ang+") scale(1.5 "+1.5*fl+")";
+      var tr="rotate("+ang+") scale("+1.5*MU+" "+1.5*fl*MU+")";
       if(o.v.ship){var sl=Math.atan(Math.tan(ang*Math.PI/180))*180/Math.PI;   // ships never roll over: tilt <=20deg, mirror to face left
-        tr="rotate("+(o.v.up?0:Math.max(-20,Math.min(20,sl)))+") scale("+(Math.abs(ang)>90?-o.v.sc:o.v.sc)+" "+o.v.sc+")"}
+        tr="rotate("+(o.v.up?0:Math.max(-20,Math.min(20,sl)))+") scale("+(Math.abs(ang)>90?-o.v.sc:o.v.sc)*MU+" "+o.v.sc*MU+")"}
       o.v.setAttribute("transform","translate("+Q.x+" "+Q.y+") "+tr);
       o.v.setAttribute("opacity",k<1?Math.min(1,k*8):Math.max(0,(1.1-k)*8));
       return true;
