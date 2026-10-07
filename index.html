@@ -156,7 +156,8 @@ blockquote p{font-family:var(--display);font-size:1.4rem;line-height:1.35;font-w
 blockquote footer{margin-top:1.4rem;color:var(--muted);font-size:.95rem}
 blockquote footer strong{color:var(--ink);display:block;font-size:1rem}
 blockquote footer{display:flex;align-items:center;gap:1rem}
-blockquote footer img{width:112px;height:112px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--line)}
+@media(max-width:480px){blockquote footer{flex-direction:column;align-items:flex-start}}
+blockquote footer img{width:150px;height:150px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--line)}
 .markets{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
 .markets span{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.4rem .95rem;font-weight:500;font-size:.95rem}
 
@@ -508,7 +509,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
       </div>
       <blockquote>
         <p>We bring our traditional family values of fairness, honesty and trust to modern ways of working. In our business, the relationship comes first.</p>
-        <footer><img src="janas.jpg" alt="Mr. Janas Khan, Managing Partner" width="112" height="112" loading="lazy"><div><strong>Mr. Janas Khan</strong>Managing Partner, SACO International</div></footer>
+        <footer><img src="janas.jpg" alt="Mr. Janas Khan, Managing Partner" width="150" height="150" loading="lazy"><div><strong>Mr. Janas Khan</strong>Managing Partner, SACO International</div></footer>
       </blockquote>
     </div>
   </section>
