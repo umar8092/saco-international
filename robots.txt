@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://umar8092.github.io/saco-international/sitemap.xml
