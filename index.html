@@ -152,8 +152,9 @@ section{padding:5.5rem 0}
 .mv h3{font-size:1.15rem}
 .mv p{margin-top:.3rem}
 blockquote{margin:0;align-self:start;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:2.2rem}
-blockquote p{font-family:var(--display);font-size:1.4rem;line-height:1.35;font-weight:500;color:var(--ink)!important}
-blockquote footer{margin-top:1.6rem;color:var(--muted);font-size:1rem;line-height:1.4}
+blockquote p{font-size:1.25rem;line-height:1.55;font-weight:400;font-style:italic;color:var(--ink)!important}
+blockquote::before{content:"\201C";display:block;font-family:var(--display);font-size:4.5rem;line-height:.6;height:2rem;color:var(--saffron)}
+blockquote footer{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--line);color:var(--muted);font-size:1rem;line-height:1.4}
 blockquote footer strong{color:var(--ink);display:block;font-size:1.2rem;margin-bottom:.2rem}
 blockquote footer{display:flex;align-items:center;gap:1rem}
 @media(max-width:480px){blockquote footer{flex-direction:column;align-items:flex-start}}
